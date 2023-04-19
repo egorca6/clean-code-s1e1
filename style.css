@@ -4,15 +4,18 @@
   color: #333;
   font-family: lato, sans-serif;
 }
+
 .matrix {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
+
 .matrix .img {
   width: 100%;
 }
+
 .matrix .matrix__info {
   font-family: fantasy, cursive;
 }
@@ -24,30 +27,39 @@
   }
 
 }
+
 .main-wrapper {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
+
 .task-input,
 .task-label {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
+
 .task-add {
   display: flex;
 }
+
 .main-wrapper__ul {
   margin: 0;
   padding: 0px;
 }
-.main-wrapper__li, .h3 {
+
+.main-wrapper__li, 
+.h3 {
   list-style: none;
 }
-.task-input,  .button {
+
+.task-input,  
+.button {
   outline: none;
 }
+
 .button {
   background: none;
   border: 0px;
@@ -57,10 +69,13 @@
   font-family: lato, sans-serif;
   cursor: pointer;
 }
+
 .button:hover {
   color: #3a3A3a;
 }
+
 /* Heading */
+
 .h3,
 .new-task {
   color: #333;
@@ -84,20 +99,24 @@
   font-family: lato, sans-serif;
   color: #888;
 }
+
 .task-input[type="text"]:focus {
   color: #333;
 }
 
 /* New Task */
+
 .new-task {
   display: block;
   margin: 0 0 20px;
 }
+
 .task-input#new-task {
   width: 318px;
 }
 
 /* Task list */
+
 .main-wrapper__li {
   overflow: hidden;
   padding: 20px 0;
@@ -106,6 +125,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .main-wrapper__li > * {
   vertical-align: middle;
 }
@@ -113,31 +133,37 @@
 .main-wrapper__li > .task-input[type="checkbox"] {
   margin: 0 10px;
 }
+
 .main-wrapper__li > .task-label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
+
 .main-wrapper__li > .task-input[type="text"] {
   width: 226px;
 }
+
 .button-delete .img {
   height: 2em;
   transform: rotatez(45deg);
   transition: transform 200ms ease-in;
 }
+
 .button-delete .img:hover {
   transform: rotatez(0);
 }
 
 /* Completed */
+
 .main-wrapper__ul#task-completed .task-label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
+
 .main-wrapper__ul .main-wrapper__li .task-input[type="text"] {
   display: none;
 }
