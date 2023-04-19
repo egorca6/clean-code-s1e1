@@ -9,29 +9,34 @@
 // Event handling, user interaction is what starts the code execution.
 
 var taskInput=document.getElementById("new-task");//Add a new task.
-var addButton=document.getElementsByTagName("button")[0];//first button
+var addButton=document.querySelector("button");//first button
+// addButton.classList.add("button");
 var incompleteTaskHolder=document.getElementById("task-incomplete");//ul of #incompleteTasks
 var completedTasksHolder=document.getElementById("task-completed");//completed-tasks
-
 
 //New task list item
 var createNewTaskElement=function(taskString){
 
     var listItem=document.createElement("li");
-
+    listItem.className ="main-wrapper__li";
     //input (checkbox)
     var checkBox=document.createElement("input");//checkbx
+   
     //label
     var label=document.createElement("label");//label
     //input (text)
     var editInput=document.createElement("input");//text
+    
     //button.edit
     var editButton=document.createElement("button");//edit button
-
+ 
+    
+   
     //button.delete
     var deleteButton=document.createElement("button");//delete button
+    deleteButton.className ="button";
     var deleteButtonImg=document.createElement("img");//delete button image
-
+    deleteButtonImg.className ="img";
     label.innerText=taskString;
     label.className='task-input';
 
@@ -41,9 +46,10 @@ var createNewTaskElement=function(taskString){
     editInput.className="task-input";
 
     editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-    editButton.className="button-edit";
-
-    deleteButton.className="button-delete";
+    editButton.className="button";
+    editButton.classList.add("button-edit");
+    deleteButton.className="button";
+    deleteButton.classList.add("button-delete")
     deleteButtonImg.src='./remove.svg';
     deleteButton.appendChild(deleteButtonImg);
 
@@ -64,13 +70,13 @@ var addTask=function(){
     //Create a new list item with the text from the #new-task:
     if (!taskInput.value) return;
     var listItem=createNewTaskElement(taskInput.value);
-
+    
     //Append listItem to incompleteTaskHolder
     incompleteTaskHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);
 
     taskInput.value="";
-
+    
 }
 
 //Edit an existing task.
@@ -141,6 +147,7 @@ var taskIncomplete=function(){
 
 var ajaxRequest=function(){
     console.log("AJAX Request");
+    
 }
 
 //The glue to hold it all together.
