@@ -43,6 +43,7 @@
 
 .task-add {
   display: flex;
+  padding-top: 20px;
 }
 
 .main-wrapper__ul {
@@ -76,8 +77,7 @@
 
 /* Heading */
 
-.h3,
-.new-task {
+.h3 {
   color: #333;
   font-weight: 700;
   font-size: 15px;
